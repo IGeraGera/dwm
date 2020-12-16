@@ -271,7 +271,11 @@ tagall(const Arg *arg)
 {
 	tag(&((Arg){.ui = ~0}));
 }
-
+void
+reloadxrdb(const Arg *arg)
+{
+	livereloadxrdb(NULL);
+}
 /* signal definitions */
 /* signum must be greater than 0 */
 /* trigger signals using `xsetroot -name "fsignal:<signame> [<type> <value>]"` */
@@ -299,4 +303,5 @@ static Signal signals[] = {
 	{ "quit",           quit },
 	{ "setlayout",      setlayout },
 	{ "setlayoutex",    setlayoutex },
+	{ "reloadxrdb",     reloadxrdb },
 };
