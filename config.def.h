@@ -146,6 +146,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },		/* Widen to Right - Focus */
 	/* z x c v */
 	{ MODKEY,                       XK_b,      togglebar,      {0}  },			/* Toggle Status Bar  */
+	{ MODKEY|ShiftMask,             XK_b,      spawn,    SHCMD("$HOME/Misc/scripts/theme/dwmThemeMenu.sh")},/* Theme Menu  */
 	{ MODKEY,			XK_n,      setlayout,      {.v = &layouts[13]}    },	/* Float - Layout */
 	{ MODKEY|ShiftMask,             XK_n,  	   togglefloating, {0} }, 			/* Toggle Floating - Layout*/
 	{ MODKEY,			XK_m,      setlayout,      {.v = &layouts[1]}    },	/* Monocle - Layout*/
