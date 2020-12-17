@@ -152,7 +152,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_n,      setlayout,      {.v = &layouts[13]}    },	/* Float - Layout */
 	{ MODKEY|ShiftMask,             XK_n,  	   togglefloating, {0} }, 			/* Toggle Floating - Layout*/
 	{ MODKEY,			XK_m,      setlayout,      {.v = &layouts[1]}    },	/* Monocle - Layout*/
-	{ MODKEY|ShiftMask,		XK_m,      spawn,      	   SHCMD("$HOME/Misc/scripts/dmenu_monitor.sh")}, /* Monitor Settings Menu - Monitor*/
+	{ MODKEY|ShiftMask,		XK_m,      spawn,      	   SHCMD("$HOME/Misc/scripts/monitor/dmenu_monitor.sh")}, /* Monitor Settings Menu - Monitor*/
 	/*Left symbols*/
 	{ MODKEY,                       XK_Tab,    view,           {0} }, 			/*Switch to Last Tag - Tag   */
 	{ MODKEY|ShiftMask,             XK_Tab,    livereloadxrdb, {0} }, 			/*Switch to Last Tag - Tag   */
