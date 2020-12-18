@@ -15,6 +15,7 @@ This is (my work in progress) build for dwm taken under the MIT License from [su
 + swallow
 + vanitygaps
 + xresources
++ center
 
 
 ## Requirements
@@ -51,4 +52,16 @@ livereloadxrdb(const Arg *arg)
         arrange(NULL);
 }
 ```
+By attaching the livereloadxrdb function to a keybinding or by adding it to the dwmc patch, the livereload function be called manualy or by a script to reload the colors added with the `$ xrdb`.
+
+For example with this build [pywal](https://github.com/dylanaraps/pywal) is given a [template](https://github.com/dylanaraps/pywal/wiki/User-Template-Files) to fill after extracting the colors and then xrdb is given the path to the output of the template in the ~/.cache/wal directory.
+
+```bash
+wal -qn -i "Path to image"
+feh --bg-fill "Path to image"
+xrdb -merge "$HOME/.cache/wal/dwm.Xresources"
+dwmc reloadxrdb
+```
+
+
 
