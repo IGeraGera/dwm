@@ -41,6 +41,7 @@ static const Rule rules[] = {
 	{ "st-256color",	NULL,     		NULL,           0,         0,          1,           0,        -1 },
 	{ "Alacritty",		NULL,     		NULL,           0,         0,          1,           0,        -1 },
 	{ "Org.gnome.Nautilus",	"org.gnome.Nautilus",   NULL,           0,         1,          0,           0,        -1 },
+	{ "File-roller",	"file-roller",   	NULL,           0,         1,          0,           0,        -1 },
 	{ NULL,      		NULL,     		"Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -82,14 +83,16 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+/* Terminal definition */
+#define TERM "alacritty"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { TERM, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120","34", NULL };
-static const char *filemancmd[] = { "alacritty", "-e", "ranger"};
+static const char *filemancmd[] = { TERM, "-e", "ranger"};
 static const char *browsercmd[] = { "firefox", NULL  };
 static const char *emailclient[] = { "thunderbird", NULL  };
 
