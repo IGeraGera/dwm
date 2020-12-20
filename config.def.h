@@ -160,6 +160,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} }, 			/*Switch to Last Tag - Tag   */
 	{ MODKEY|ShiftMask,             XK_Tab,    livereloadxrdb, {0} }, 			/*Switch to Last Tag - Tag   */
 	/*Space*/
+	{ MODKEY,                       XK_space,    spawn,         SHCMD("kill -35 $(pidof dwmblocks)") }, /*Switch Keyboard Language*/
 	/*Right symbols*/
 	{ MODKEY|ShiftMask,	     XK_BackSpace, killclient,     {0} },			/* Kill Focus Focus  */
 	{ MODKEY,                       XK_Return, zoom,           {0} },			/* Switch to Focus  */
@@ -193,9 +194,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask|ControlMask, XK_0,      togglegaps,     {0} },                       /* Toggle Gaps  */
 	/* XF keys multimedia etc */
 
-	{ 0,              XF86XK_AudioMute,             spawn,     SHCMD("amixer -D pulse sset Master  toggle") },  /* Toggle Mute - Volume*/
-	{ 0,              XF86XK_AudioRaiseVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%+") },     /* Increase Volume +5% - Volume*/
-	{ 0,              XF86XK_AudioLowerVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%-") },     /* Decrease Volume -5% - Volume*/
+	{ 0,              XF86XK_AudioMute,             spawn,     SHCMD("amixer -D pulse sset Master  toggle && kill -36 $(pidof dwmblocks)") },  /* Toggle Mute - Volume*/
+	{ 0,              XF86XK_AudioRaiseVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%+ && kill -36 $(pidof dwmblocks)") },     /* Increase Volume +5% - Volume*/
+	{ 0,              XF86XK_AudioLowerVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%- && kill -36 $(pidof dwmblocks)") },     /* Decrease Volume -5% - Volume*/
 	/*vanity gaps bindings	*/
 
 	/*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },*/
