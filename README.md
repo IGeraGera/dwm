@@ -16,6 +16,7 @@ This is (my work in progress) build for dwm taken under the MIT License from [su
 + vanitygaps
 + xresources
 + center
++ cmdsignal
 
 
 ## Requirements
