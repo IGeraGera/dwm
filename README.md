@@ -17,6 +17,7 @@ This is (my work in progress) build for dwm taken under the MIT License from [su
 + xresources
 + center
 + cmdsignal
++ noborderfloating fix 
 
 
 ## Requirements
