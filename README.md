@@ -18,6 +18,7 @@ This is (my work in progress) build for dwm taken under the MIT License from [su
 + center
 + cmdsignal
 + noborderfloating fix 
++ fix borders (for border opacity)
 
 
 ## Requirements
