@@ -92,7 +92,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { TERM, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120","34", NULL };
-static const char *filemancmd[] = { TERM, "-e", "ranger"};
+static const char *filemancmd[] = { TERM, "-e", "bash","-c","$HOME/bin/readWal; ranger","NULL"};
 static const char *browsercmd[] = { "firefox", NULL  };
 static const char *emailclient[] = { "thunderbird", NULL  };
 
