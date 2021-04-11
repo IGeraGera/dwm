@@ -149,6 +149,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_j,	   focusmaster,    {0} },			/* Move focus to Master - Focus */
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },		/* Move Back Stack - Focus */
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },		/* Widen to Right - Focus */
+	{ MODKEY|ShiftMask,             XK_l,      spawn,       SHCMD( "slock" )},		/* Lock Screen with Slock*/
 	/* z x c v */
 	{ MODKEY,                       XK_b,      togglebar,      {0}  },			/* Toggle Status Bar  */
 	{ MODKEY|ShiftMask,             XK_b,      spawn,    SHCMD("$HOME/Misc/scripts/theme/dwmThemeMenu.sh")},/* Theme Menu  */
