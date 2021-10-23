@@ -141,7 +141,7 @@ static Key keys[] = {
 	/* y u  i p*/
 	/* a s */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },		/* Launch dmenu */
-	{ MODKEY|ShiftMask,             XK_d,      spawn,   SHCMD("$HOME/Misc/scripts/todo") },	/* Launch ToDo */
+	{ MODKEY|ShiftMask,             XK_d,      spawn,   SHCMD("$HOME/.dwm/scripts/todo") },	/* Launch ToDo */
 	{ MODKEY,			XK_f,	   spawn,	   {.v = filemancmd } },	/* Launch File Manager (Ranger) */
 	/* g */
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },		/* Widen to Left - Focus */
@@ -152,11 +152,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,       SHCMD( "slock" )},		/* Lock Screen with Slock*/
 	/* z x c v */
 	{ MODKEY,                       XK_b,      togglebar,      {0}  },			/* Toggle Status Bar  */
-	{ MODKEY|ShiftMask,             XK_b,      spawn,    SHCMD("$HOME/Misc/scripts/theme/dwmThemeMenu.sh")},/* Theme Menu  */
+	{ MODKEY|ShiftMask,             XK_b,      spawn,    SHCMD("$HOME/.dwm/scripts/theme/dwmThemeMenu.sh")},/* Theme Menu  */
 	{ MODKEY,			XK_n,      setlayout,      {.v = &layouts[13]}    },	/* Float - Layout */
 	{ MODKEY|ShiftMask,             XK_n,  	   togglefloating, {0} }, 			/* Toggle Floating - Layout*/
 	{ MODKEY,			XK_m,      setlayout,      {.v = &layouts[1]}    },	/* Monocle - Layout*/
-	{ MODKEY|ShiftMask,		XK_m,      spawn,      	   SHCMD("$HOME/Misc/scripts/monitor/dmenu_monitor.sh")}, /* Monitor Settings Menu - Monitor*/
+	{ MODKEY|ShiftMask,		XK_m,      spawn,      	   SHCMD("$HOME/.dwm/scripts/monitor/dmenu_monitor.sh")}, /* Monitor Settings Menu - Monitor*/
 	/*Left symbols*/
 	{ MODKEY,                       XK_Tab,    view,           {0} }, 			/*Switch to Last Tag - Tag   */
 	{ MODKEY|ShiftMask,             XK_Tab,    livereloadxrdb, {0} }, 			/*Switch to Last Tag - Tag   */
@@ -173,7 +173,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },		/* Select Previous Monitor - Monitor  */
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },		/* Move focus to Next Monitor - Monitor */
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },		/* Move focus to Previous Monitor - Monitor */
-	{ MODKEY|ShiftMask,             XK_slash,  spawn,         SHCMD("$HOME/Misc/scripts/dwmKeyMenu.sh $HOME/Misc/dwm/config.def.h") }, /* ? dwmKeyMenu - Info */
+	{ MODKEY|ShiftMask,             XK_slash,  spawn,         SHCMD("$HOME/.dwm/scripts/dwmKeyMenu.sh $HOME/Misc/dwm/config.def.h") }, /* ? dwmKeyMenu - Info */
 
 
 	/* Top Number Line*/
