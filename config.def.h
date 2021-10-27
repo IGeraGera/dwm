@@ -195,10 +195,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask|ControlMask, XK_0,      togglegaps,     {0} },                       /* Toggle Gaps  */
 	/* XF keys multimedia etc */
 
-	{ 0,              XF86XK_AudioMute,             spawn,     SHCMD("amixer -D pulse sset Master  toggle && kill -36 $(pidof dwmblocks)") },  /* Toggle Mute - Volume*/
+	{ 0,              XF86XK_AudioMute,             spawn,     SHCMD("~/.dwm/scripts/sound/volumeHandler 'TOGGLE' && kill -36 $(pidof dwmblocks)") },  /* Toggle Mute - Volume*/
 	{ 0,              XF86XK_AudioPlay,             spawn,     SHCMD("playerctl play-pause") },  /* Toggle Play -Pause */
-	{ 0,              XF86XK_AudioRaiseVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%+ && kill -36 $(pidof dwmblocks)") },     /* Increase Volume +5% - Volume*/
-	{ 0,              XF86XK_AudioLowerVolume,      spawn,     SHCMD("amixer -D pulse sset Master  5%- && kill -36 $(pidof dwmblocks)") },     /* Decrease Volume -5% - Volume*/
+	{ 0,              XF86XK_AudioRaiseVolume,      spawn,     SHCMD("~/.dwm/scripts/sound/volumeHandler 'UP' && kill -36 $(pidof dwmblocks)") },     /* Increase Volume +5% - Volume*/
+	{ 0,              XF86XK_AudioLowerVolume,      spawn,     SHCMD("~/.dwm/scripts/sound/volumeHandler 'DOWN' && kill -36 $(pidof dwmblocks)") },     /* Decrease Volume -5% - Volume*/
 	/*vanity gaps bindings	*/
 
 	/*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },*/
