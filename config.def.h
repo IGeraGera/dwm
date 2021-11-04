@@ -36,8 +36,8 @@ static const Rule rules[] = {
 	 */
 	/* class     		instance  		title           tags mask  iscentered	isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    		NULL,     		NULL,           0,         1,		1,          0,           0,        -1 },
-	{ "Firefox", 		"Navigator",    	NULL,           1 << 8,    0,		0,          0,          -1,        -1 },
-	{ "Firefox", 		"Firefox",     		NULL,           0,	   1,		1,          0,          -1,        -1 },
+	{ "firefox", 		"Navigator",    	NULL,           1 << 8,    0,		0,          0,          -1,        -1 },
+	{ "firefox", 		"Firefox",     		NULL,           0,	   1,		1,          0,          -1,        -1 },
 	{ "st-256color",	NULL,     		NULL,           0,         0,		0,          1,           0,        -1 },
 	{ "Alacritty",		NULL,     		NULL,           0,         0,		0,          1,           0,        -1 },
 	{ "Org.gnome.Nautilus",	"org.gnome.Nautilus",   NULL,           0,         1,		1,          0,           0,        -1 },
@@ -92,7 +92,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { TERM, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-d", "120","34", NULL };
-static const char *filemancmd[] = { TERM, "-e", "bash","-c","$HOME/bin/readWal; ranger","NULL"};
+static const char *tuifilemancmd[] = { TERM, "-e", "bash","-c","$HOME/bin/readWal; ranger","NULL"};
+static const char *guifilemancmd[] = { "pcmanfm",NULL};
 static const char *browsercmd[] = { "firefox", NULL  };
 static const char *emailclient[] = { "thunderbird", NULL  };
 
@@ -142,7 +143,8 @@ static Key keys[] = {
 	/* a s */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },		/* Launch dmenu */
 	{ MODKEY|ShiftMask,             XK_d,      spawn,   SHCMD("$HOME/.dwm/scripts/todo") },	/* Launch ToDo */
-	{ MODKEY,			XK_f,	   spawn,	   {.v = filemancmd } },	/* Launch File Manager (Ranger) */
+	{ MODKEY,			XK_f,	   spawn,	   {.v = tuifilemancmd } },	/* Launch Text File Manager (Ranger) */
+	{ MODKEY|ShiftMask,		XK_f,	   spawn,	   {.v = guifilemancmd } },	/* Launch Text File Manager (Ranger) */
 	/* g */
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },		/* Widen to Left - Focus */
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },		/* Move Forward Stack - Focus */
