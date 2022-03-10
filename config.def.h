@@ -201,6 +201,8 @@ static Key keys[] = {
 	{ 0,              XF86XK_AudioPlay,             spawn,     SHCMD("playerctl play-pause") },  /* Toggle Play -Pause */
 	{ 0,              XF86XK_AudioRaiseVolume,      spawn,     SHCMD("~/.dwm/scripts/sound/volumeHandler 'UP' && kill -36 $(pidof dwmblocks)") },     /* Increase Volume +5% - Volume*/
 	{ 0,              XF86XK_AudioLowerVolume,      spawn,     SHCMD("~/.dwm/scripts/sound/volumeHandler 'DOWN' && kill -36 $(pidof dwmblocks)") },     /* Decrease Volume -5% - Volume*/
+	{ 0,              XF86XK_MonBrightnessUp,          spawn,     SHCMD("brightnessctl set 5%+") },  /* Monitor Brightness Up */
+	{ 0,              XF86XK_MonBrightnessDown,        spawn,     SHCMD("brightnessctl set 5%-") },  /* Monitor Brightness Down */
 	/*vanity gaps bindings	*/
 
 	/*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },*/
